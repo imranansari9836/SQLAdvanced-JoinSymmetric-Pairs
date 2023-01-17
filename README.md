@@ -1,1 +1,4 @@
-# SQLAdvanced-JoinSymmetric-Pairs
+SELECT A.X,A.Y FROM Functions AS A JOIN Functions AS B 
+ON A.X=B.Y AND B.X=A.Y
+GROUP BY A.X,A.Y HAVING COUNT(A.X)>1 OR A.X<A.Y 
+ORDER BY A.X ASC;
